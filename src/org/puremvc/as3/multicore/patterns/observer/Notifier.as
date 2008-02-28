@@ -26,6 +26,16 @@ package org.puremvc.as3.multicore.patterns.observer
 	 * classes have frequent <code>Facade</code> interactions and usually require
 	 * access to the facade anyway.</P>
 	 * 
+	 * <P>
+	 * NOTE: In the MultiCore version of the framework, there is one caveat to
+	 * notifiers, they cannot send notifications or reach the facade until they
+	 * have a valid multitonKey. 
+	 * 
+	 * The multitonKey is set:
+	 *   * on a Command when it is executed by the Controller
+	 *   * on a Mediator is registered with the View
+	 *   * on a Proxy is registered with the Model. 
+	 * 
 	 * @see org.puremvc.as3.multicore.patterns.proxy.Proxy Proxy
 	 * @see org.puremvc.as3.multicore.patterns.facade.Facade Facade
 	 * @see org.puremvc.as3.multicore.patterns.mediator.Mediator Mediator
