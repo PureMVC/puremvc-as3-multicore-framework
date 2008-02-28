@@ -43,8 +43,15 @@ package org.puremvc.as3.multicore.interfaces
 		function sendNotification( notificationName:String, body:Object=null, type:String=null ):void; 
 		
 		/**
-		 * Set the multitonKey for this INotifier instance
+		 * Initialize this INotifier instance.
+		 * <P>
+		 * This is how a Notifier gets its multitonKey. 
+		 * Calls to sendNotification or to access the
+		 * facade will fail until after this method 
+		 * has been called.</P>
+		 * 
+		 * @param key the multitonKey for this INotifier to use
 		 */
-		function setMultitonKey( key:String ): void;
+		function initializeNotifier( key:String ): void;
 	}
 }

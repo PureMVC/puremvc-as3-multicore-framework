@@ -89,7 +89,7 @@ package org.puremvc.as3.multicore.core
 		 */
 		public function registerProxy( proxy:IProxy ) : void
 		{
-			proxy.setMultitonKey( multitonKey );
+			proxy.initializeNotifier( multitonKey );
 			proxyMap[ proxy.getProxyName() ] = proxy;
 		}
 

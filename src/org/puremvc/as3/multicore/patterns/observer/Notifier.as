@@ -60,7 +60,25 @@ package org.puremvc.as3.multicore.patterns.observer
 				facade.sendNotification( notificationName, body, type );
 		}
 		
-		public function setMultitonKey( key:String ):void
+		/**
+		 * Initialize this INotifier instance.
+		 * <P>
+		 * This is how a Notifier gets its multitonKey. 
+		 * Calls to sendNotification or to access the
+		 * facade will fail until after this method 
+		 * has been called.</P>
+		 * 
+		 * <P>
+		 * Mediators, Commands or Proxies may override 
+		 * this method in order to send notifications
+		 * or access the Multiton Facade instance as
+		 * soon as possible. They CANNOT access the facade
+		 * in their constructors, since this method will not
+		 * yet have been called.</P> 
+		 * 
+		 * @param key the multitonKey for this INotifier to use
+		 */
+		public function initializeNotifier( key:String ):void
 		{
 			multitonKey = key;
 		}

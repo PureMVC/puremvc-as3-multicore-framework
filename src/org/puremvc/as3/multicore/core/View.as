@@ -136,7 +136,7 @@ package org.puremvc.as3.multicore.core
 		public function registerMediator( mediator:IMediator ) : void
 		{
 		
-			mediator.setMultitonKey( multitonKey );
+			mediator.initializeNotifier( multitonKey );
 
 			// Register the Mediator for retrieval by name
 			mediatorMap[ mediator.getMediatorName() ] = mediator;

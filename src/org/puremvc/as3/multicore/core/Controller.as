@@ -113,7 +113,7 @@ package org.puremvc.as3.multicore.core
 			if ( commandClassRef == null ) return;
 
 			var commandInstance : ICommand = new commandClassRef();
-			commandInstance.setMultitonKey( multitonKey );
+			commandInstance.initializeNotifier( multitonKey );
 			commandInstance.execute( note );
 		}
 

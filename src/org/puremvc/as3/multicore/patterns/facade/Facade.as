@@ -32,7 +32,7 @@ package org.puremvc.as3.multicore.patterns.facade
 		 */
 		public function Facade( key:String ) {
 			if (instanceMap[ key ] != null) throw Error(MULTITON_MSG);
-			setMultitonKey( key );
+			initializeNotifier( key );
 			instanceMap[ multitonKey ] = this;
 			initializeFacade();	
 		}
@@ -302,7 +302,7 @@ package org.puremvc.as3.multicore.patterns.facade
 		 * It is necessary to be public in order to 
 		 * implement INotifier.</P>
 		 */
-		public function setMultitonKey( key:String ):void
+		public function initializeNotifier( key:String ):void
 		{
 			multitonKey = key;
 		}
