@@ -5,6 +5,7 @@
 package org.puremvc.as3.multicore.patterns.observer
 {
 	import org.puremvc.as3.multicore.interfaces.*;
+	import org.puremvc.as3.multicore.patterns.facade.Facade;
 	
 	/**
 	 * A Base <code>INotifier</code> implementation.
@@ -54,12 +55,18 @@ package org.puremvc.as3.multicore.patterns.observer
 			multitonKey = key;
 		}
 		
-		
-		// Local reference to the Multiton Facade instance 
-		protected var facade:IFacade;
+		// Return the Multiton Facade instance 
+		protected function get facade():IFacade
+		{
+			if ( multitonKey == null ) throw Error( MULTITON_MSG );
+			return Facade.getInstance( multitonKey );
+		}
 		
 		// The Multiton Key for this app
 		protected var multitonKey : String;
+
+		// Message Constants
+		protected const MULTITON_MSG : String = "multitonKey for this Notifier not yet initialized!";
 
 	}
 }
