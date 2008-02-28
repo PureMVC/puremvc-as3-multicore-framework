@@ -4,7 +4,6 @@
 */
 package org.puremvc.as3.multicore.core
 {
-	import org.puremvc.as3.multicore.core.*;
 	import org.puremvc.as3.multicore.interfaces.*;
 	import org.puremvc.as3.multicore.patterns.observer.*;
 	
@@ -172,7 +171,7 @@ package org.puremvc.as3.multicore.core
 		protected var multitonKey : String;
 
 		// Singleton instance
-		protected static var instanceMap : Array;
+		protected static var instanceMap : Array = new Array();
 
 		// Message Constants
 		protected const MULTITON_MSG : String = "Controller instance for this Multiton key already constructed!";

@@ -240,7 +240,7 @@ package org.puremvc.as3.multicore.core
 		protected var observerMap	: Array;
 		
 		// Singleton instance
-		protected static var instanceMap : Array;
+		protected static var instanceMap : Array = new Array();
 
 		// The Multiton Key for this app
 		protected var multitonKey : String;
