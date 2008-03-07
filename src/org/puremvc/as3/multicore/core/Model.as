@@ -91,6 +91,7 @@ package org.puremvc.as3.multicore.core
 		{
 			proxy.initializeNotifier( multitonKey );
 			proxyMap[ proxy.getProxyName() ] = proxy;
+			proxy.onRegister();
 		}
 
 		/**
@@ -125,6 +126,7 @@ package org.puremvc.as3.multicore.core
 		{
 			var proxy:IProxy = proxyMap [ proxyName ] as IProxy;
 			proxyMap[ proxyName ] = null;
+			proxy.onRemove();
 			return proxy;
 		}
 

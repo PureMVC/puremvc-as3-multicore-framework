@@ -47,5 +47,16 @@ package org.puremvc.as3.multicore.interfaces
 		 * @return the data as type Object
 		 */
 		function getData():Object; 
+		
+		/**
+		 * Called by the Model when the Proxy is registered
+		 */ 
+		function onRegister( ):void;
+
+		/**
+		 * Called by the Model when the Proxy is removed
+		 */ 
+		function onRemove( ):void;
+		
 	}
 }
