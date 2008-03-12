@@ -15,7 +15,7 @@ package org.puremvc.as3.multicore.patterns.command
 	 * Your subclass should override the <code>execute</code> 
 	 * method where your business logic will handle the <code>INotification</code>. </P>
 	 * 
-	 * @see org.puremvc.as3.multicore.core.controller.Controller Controller
+	 * @see org.puremvc.as3.multicore.core.Controller Controller
 	 * @see org.puremvc.as3.multicore.patterns.observer.Notification Notification
 	 * @see org.puremvc.as3.multicore.patterns.command.MacroCommand MacroCommand
 	 */

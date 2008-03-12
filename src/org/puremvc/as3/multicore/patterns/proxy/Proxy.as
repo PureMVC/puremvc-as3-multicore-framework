@@ -27,7 +27,7 @@ package org.puremvc.as3.multicore.patterns.proxy
 	 * <code>Proxy</code> and listening for a <code>Notification</code> to be sent 
 	 * when the <code>Proxy</code> has retrieved the data from the service. </P>
 	 * 
-	 * @see org.puremvc.as3.multicore.core.model.Model Model
+	 * @see org.puremvc.as3.multicore.core.Model Model
 	 */
 	public class Proxy extends Notifier implements IProxy, INotifier
 	{

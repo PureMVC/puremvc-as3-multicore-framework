@@ -31,7 +31,7 @@ package org.puremvc.as3.multicore.patterns.command
 	 * 
 	 * <P>
 	 * 
-	 * @see org.puremvc.as3.multicore.core.controller.Controller Controller
+	 * @see org.puremvc.as3.multicore.core.Controller Controller
 	 * @see org.puremvc.as3.multicore.patterns.observer.Notification Notification
 	 * @see org.puremvc.as3.multicore.patterns.command.SimpleCommand SimpleCommand
 	 */

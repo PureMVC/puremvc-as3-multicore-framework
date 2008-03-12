@@ -23,7 +23,7 @@ package org.puremvc.as3.multicore.patterns.observer
 	 * <LI>Provide a method for notifying the interested object.</LI>
 	 * </UL>
 	 * 
-	 * @see org.puremvc.as3.multicore.core.view.View View
+	 * @see org.puremvc.as3.multicore.core.View View
 	 * @see org.puremvc.as3.multicore.patterns.observer.Notification Notification
 	 */
 	public class Observer implements IObserver

@@ -11,9 +11,9 @@ package org.puremvc.as3.multicore.patterns.facade
 	/**
 	 * A base Multiton <code>IFacade</code> implementation.
 	 * 
-	 * @see org.puremvc.as3.multicore.model.Model Model
-	 * @see org.puremvc.as3.multicore.view.View View
-	 * @see org.puremvc.as3.multicore.controller.Controller Controller 
+	 * @see org.puremvc.as3.multicore.core.Model Model
+	 * @see org.puremvc.as3.multicore.core.View View
+	 * @see org.puremvc.as3.multicore.core.Controller Controller 
 	 */
 	public class Facade implements IFacade
 	{

@@ -10,7 +10,7 @@ package org.puremvc.as3.multicore.patterns.mediator
 	/**
 	 * A base <code>IMediator</code> implementation. 
 	 * 
-	 * @see org.puremvc.as3.multicore.core.view.View View
+	 * @see org.puremvc.as3.multicore.core.View View
 	 */
 	public class Mediator extends Notifier implements IMediator, INotifier
 	{
