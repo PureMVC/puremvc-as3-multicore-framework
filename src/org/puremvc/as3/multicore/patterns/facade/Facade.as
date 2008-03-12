@@ -307,6 +307,21 @@ package org.puremvc.as3.multicore.patterns.facade
 			multitonKey = key;
 		}
 
+		/**
+		 * Remove a Core 
+		 * 
+		 * @param multitonKey of the Core to remove
+		 */
+		public function removeCore( key:String ) : void
+		{
+			// remove the model, view, controller 
+			// and facade instances for this key 
+			model.removeModel( key ); 
+			view.removeView( key );
+			controller.removeController( key );
+			delete instanceMap[ key ];
+		}
+
 		// References to Model, View and Controller
 		protected var controller : IController;
 		protected var model		 : IModel;
@@ -319,7 +334,7 @@ package org.puremvc.as3.multicore.patterns.facade
 		protected static var instanceMap : Array = new Array(); 
 		
 		// Message Constants
-		protected const MULTITON_MSG	: String = "Facade instance for this Multiton key already constructed!";
+		protected const MULTITON_MSG:String = "Facade instance for this Multiton key already constructed!";
 	
 	}
 }

@@ -161,13 +161,23 @@ package org.puremvc.as3.multicore.core
 			commandMap[ notificationName ] = null;
 		}
 		
+		/**
+		 * Remove an IController instance
+		 * 
+		 * @param multitonKey of IController instance to remove
+		 */
+		public function removeController( key:String ):void
+		{
+			delete instanceMap[ key ];
+		}
+
 		// Local reference to View 
 		protected var view : IView;
 		
 		// Mapping of Notification names to Command Class references
 		protected var commandMap : Array;
 
-		// The Multiton Key for this app
+		// The Multiton Key for this Core
 		protected var multitonKey : String;
 
 		// Singleton instance

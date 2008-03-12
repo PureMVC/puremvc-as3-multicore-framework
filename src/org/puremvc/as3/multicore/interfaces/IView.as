@@ -91,7 +91,13 @@ package org.puremvc.as3.multicore.interfaces
 		 * @return whether a Mediator is registered with the given <code>mediatorName</code>.
 		 */
 		function hasMediator( mediatorName:String ) : Boolean;
-		
+
+		/**
+		 * Remove an IView instance
+		 * 
+		 * @param multitonKey of IView instance to remove
+		 */
+		function removeView( key:String ):void
 	}
 	
 }

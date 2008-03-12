@@ -233,6 +233,16 @@ package org.puremvc.as3.multicore.core
 			return mediatorMap[ mediatorName ] != null;
 		}
 
+		/**
+		 * Remove an IView instance
+		 * 
+		 * @param multitonKey of IView instance to remove
+		 */
+		public function removeView( key:String ):void
+		{
+			delete instanceMap[ key ];
+		}
+		
 		// Mapping of Mediator names to Mediator instances
 		protected var mediatorMap : Array;
 
@@ -242,10 +252,10 @@ package org.puremvc.as3.multicore.core
 		// Singleton instance
 		protected static var instanceMap : Array = new Array();
 
-		// The Multiton Key for this app
+		// The Multiton Key for this Core
 		protected var multitonKey : String;
 
 		// Message Constants
-		protected const MULTITON_MSG	: String = "View instance for this Multiton key already constructed!";
+		protected const MULTITON_MSG:String = "View instance for this Multiton key already constructed!";
 	}
 }

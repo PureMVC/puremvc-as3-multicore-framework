@@ -112,5 +112,11 @@ package org.puremvc.as3.multicore.interfaces
 		 */
 		function hasMediator( mediatorName:String ) : Boolean;
 
+		/**
+		 * Remove a Core 
+		 * 
+		 * @param multitonKey of the Core to remove
+		 */
+		function removeCore( key:String ) : void;
 	}
 }

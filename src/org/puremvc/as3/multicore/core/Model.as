@@ -130,17 +130,27 @@ package org.puremvc.as3.multicore.core
 			return proxy;
 		}
 
+		/**
+		 * Remove an IModel instance
+		 * 
+		 * @param multitonKey of IModel instance to remove
+		 */
+		public function removeModel( key:String ):void
+		{
+			delete instanceMap[ key ];
+		}
+
 		// Mapping of proxyNames to IProxy instances
 		protected var proxyMap : Array;
 
 		// Singleton instance
 		protected static var instanceMap:Array = new Array();
 		
-		// The Multiton Key for this app
+		// The Multiton Key for this Core
 		protected var multitonKey : String;
 
 		// Message Constants
-		protected const MULTITON_MSG	: String = "Model instance for this Multiton key already constructed!";
+		protected const MULTITON_MSG:String = "Model instance for this Multiton key already constructed!";
 
 	}
 

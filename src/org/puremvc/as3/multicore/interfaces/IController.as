@@ -60,5 +60,14 @@ package org.puremvc.as3.multicore.interfaces
 		 * @return whether a Command is currently registered for the given <code>notificationName</code>.
 		 */
 		function hasCommand( notificationName:String ) : Boolean;
+
+		/**
+		 * Remove an IController instance
+		 * 
+		 * @param multitonKey of IController instance to remove
+		 */
+		function removeController( key:String ):void
+
+
 	}
 }
