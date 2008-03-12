@@ -113,6 +113,7 @@ package org.puremvc.as3.multicore.patterns.command
 			while ( subCommands.length > 0) {
 				var commandClassRef : Class = subCommands.shift();
 				var commandInstance : ICommand = new commandClassRef();
+				commandInstance.initializeNotifier( multitonKey );
 				commandInstance.execute( notification );
 			}
 		}
