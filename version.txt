@@ -13,7 +13,9 @@ TBD: Porting the unit tests.
 
 1.0.2 - Facade and IFacade get removeCore method. Model and IModel get 
         removeModel method View and IView get removeView method.
-        Controller and IController get removeController method.          
+        Controller and IController get removeController method. Corrected
+        documentation references to core actors, which were moved together
+        into the core package. 
 
 1.0.1 - Corrected issue with SimpleCommands not getting their initializeNotifier
         method called. 
