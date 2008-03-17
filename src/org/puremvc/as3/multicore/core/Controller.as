@@ -158,7 +158,15 @@ package org.puremvc.as3.multicore.core
 		 */
 		public function removeCommand( notificationName : String ) : void
 		{
-			commandMap[ notificationName ] = null;
+			// if the Command is registered...
+			if ( hasCommand( notificationName ) )
+			{
+				// remove the observer
+				view.removeObserver( notificationName, this );
+							
+				// remove the command
+				commandMap[ notificationName ] = null;
+			}
 		}
 		
 		/**
