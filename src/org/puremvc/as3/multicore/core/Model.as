@@ -125,8 +125,11 @@ package org.puremvc.as3.multicore.core
 		public function removeProxy( proxyName:String ) : IProxy
 		{
 			var proxy:IProxy = proxyMap [ proxyName ] as IProxy;
-			proxyMap[ proxyName ] = null;
-			proxy.onRemove();
+			if ( proxy ) 
+			{
+				proxyMap[ proxyName ] = null;
+				proxy.onRemove();
+			}
 			return proxy;
 		}
 
