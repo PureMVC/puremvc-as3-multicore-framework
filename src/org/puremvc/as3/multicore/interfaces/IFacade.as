@@ -113,6 +113,22 @@ package org.puremvc.as3.multicore.interfaces
 		function hasMediator( mediatorName:String ) : Boolean;
 
 		/**
+		 * Notify <code>Observer</code>s.
+		 * <P>
+		 * This method is left public mostly for backward 
+		 * compatibility, and to allow you to send custom 
+		 * notification classes using the facade.</P>
+		 *<P> 
+		 * Usually you should just call sendNotification
+		 * and pass the parameters, never having to 
+		 * construct the notification yourself.</P>
+		 * 
+		 * @param notification the <code>INotification</code> to have the <code>View</code> notify <code>Observers</code> of.
+		 */
+		function notifyObservers ( notification:INotification ):void;
+
+
+		/**
 		 * Remove a Core 
 		 * 
 		 * @param multitonKey of the Core to remove
