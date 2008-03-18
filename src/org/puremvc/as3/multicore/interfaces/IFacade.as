@@ -6,7 +6,7 @@ package org.puremvc.as3.multicore.interfaces
 {
 
 	/**
-	 * The interface definition for a PureMVC Facade.
+	 * The interface definition for a PureMVC Facade. 
 	 *
 	 * <P>
 	 * The Facade Pattern suggests providing a single
