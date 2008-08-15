@@ -1,13 +1,33 @@
-PureMVC - Copyright(c) 2006-08 Futurescale, Inc., Some rights reserved.
+PureMVC [ MultiCore Version ]
+Copyright(c) 2006-08 Futurescale, Inc., Some rights reserved.
 --------------------------------------------------------------------------
-Release Date: 3/18/08
+Release Date: 8/14/08
     Platform: ActionScript 3 (Flash, Flex, AIR)
      Version: 1 
     Revision: 0
-       Minor: 4
+       Minor: 5
       Author: Cliff Hall <cliff@puremvc.org>
      License: Creative Commons Attribution 3.0 United States License
 --------------------------------------------------------------------------
+1.0.5 - Added a public static hasCore method to Facade and IFacade. 
+		Made Facade.removeCore public static.
+		Made Model.removeModel public static;  
+		Made View.removeView public static.
+		Made Controller.removeController public static. 
+		Removed IFacade.removeCore. (interfaces are for instance methods)
+		Removed IModel.removeModel. (...)
+		Removed IView.removeView.   (...)  
+		Removed IController.removeController. (...)  
+		...AND...
+        Followed the changes to in Standard Version 2.0.4, which fixed
+        2 outstanding bugs that were common to both versions of the 
+        framework for AS3: Dissallowed re-registration of Mediators in 
+        View.registerMediator. For more on this bug, see:
+        http://forums.puremvc.org/index.php?topic=372
+        Modified View.notifyObservers to notify from a copy of the 
+        observer list rather than the actual observer list, which may
+        change during the notification loop. For more on this bug, see:
+        http://forums.puremvc.org/index.php?topic=490
 
 1.0.4 - Added notifyObservers back to the IFacade interface. This was the 
         same change made in the Standard Version 2.0.2

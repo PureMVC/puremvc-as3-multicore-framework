@@ -308,17 +308,30 @@ package org.puremvc.as3.multicore.patterns.facade
 		}
 
 		/**
-		 * Remove a Core 
+		 * Check if a Core is registered or not
+		 * 
+		 * @param key the multiton key for the Core in question
+		 * @return whether a Core is registered with the given <code>key</code>.
+		 */
+		public static function hasCore( key:String ) : Boolean
+		{
+			return ( instanceMap[ key ] != null );
+		}
+
+		/**
+		 * Remove a Core.
+		 * <P>
+		 * Remove the Model, View, Controller and Facade 
+		 * instances for the given key.</P>
 		 * 
 		 * @param multitonKey of the Core to remove
 		 */
-		public function removeCore( key:String ) : void
+		public static function removeCore( key:String ) : void
 		{
-			// remove the model, view, controller 
-			// and facade instances for this key 
-			model.removeModel( key ); 
-			view.removeView( key );
-			controller.removeController( key );
+			if (instanceMap[ key ] == null) return;
+			Model.removeModel( key ); 
+			View.removeView( key );
+			Controller.removeController( key );
 			delete instanceMap[ key ];
 		}
 

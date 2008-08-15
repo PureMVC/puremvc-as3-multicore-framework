@@ -125,14 +125,7 @@ package org.puremvc.as3.multicore.interfaces
 		 * 
 		 * @param notification the <code>INotification</code> to have the <code>View</code> notify <code>Observers</code> of.
 		 */
-		function notifyObservers ( notification:INotification ):void;
+		function notifyObservers( notification:INotification ):void;
 
-
-		/**
-		 * Remove a Core 
-		 * 
-		 * @param multitonKey of the Core to remove
-		 */
-		function removeCore( key:String ) : void;
 	}
 }

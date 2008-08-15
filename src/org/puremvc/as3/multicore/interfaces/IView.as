@@ -101,13 +101,6 @@ package org.puremvc.as3.multicore.interfaces
 		 */
 		function hasMediator( mediatorName:String ) : Boolean;
 
-		/**
-		 * Remove an IView instance
-		 * 
-		 * @param multitonKey of IView instance to remove
-		 */
-		function removeView( key:String ):void
-
 	}
 	
 }

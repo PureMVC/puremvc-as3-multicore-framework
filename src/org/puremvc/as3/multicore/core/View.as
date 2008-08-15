@@ -108,9 +108,22 @@ package org.puremvc.as3.multicore.core
 		public function notifyObservers( notification:INotification ) : void
 		{
 			if( observerMap[ notification.getName() ] != null ) {
-				var observers:Array = observerMap[ notification.getName() ] as Array;
-				for (var i:Number = 0; i < observers.length; i++) {
-					var observer:IObserver = observers[ i ] as IObserver;
+				
+				// Get a reference to the observers list for this notification name
+				var observers_ref:Array = observerMap[ notification.getName() ] as Array;
+
+				// Copy observers from reference array to working array, 
+				// since the reference array may change during the notification loop
+   				var observers:Array = new Array(); 
+   				var observer:IObserver;
+				for (var i:Number = 0; i < observers_ref.length; i++) { 
+					observer = observers_ref[ i ] as IObserver;
+					observers.push( observer );
+				}
+				
+				// Notify Observers from the working array				
+				for (i = 0; i < observers.length; i++) {
+					observer = observers[ i ] as IObserver;
 					observer.notifyObserver( notification );
 				}
 			}
@@ -165,6 +178,9 @@ package org.puremvc.as3.multicore.core
 		public function registerMediator( mediator:IMediator ) : void
 		{
 		
+			// do not allow re-registration (you must to removeMediator fist)
+			if ( mediatorMap[ mediator.getMediatorName() ] != null ) return;
+			
 			mediator.initializeNotifier( multitonKey );
 
 			// Register the Mediator for retrieval by name
@@ -255,7 +271,7 @@ package org.puremvc.as3.multicore.core
 		 * 
 		 * @param multitonKey of IView instance to remove
 		 */
-		public function removeView( key:String ):void
+		public static function removeView( key:String ):void
 		{
 			delete instanceMap[ key ];
 		}

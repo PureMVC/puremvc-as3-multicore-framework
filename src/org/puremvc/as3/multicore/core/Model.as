@@ -138,7 +138,7 @@ package org.puremvc.as3.multicore.core
 		 * 
 		 * @param multitonKey of IModel instance to remove
 		 */
-		public function removeModel( key:String ):void
+		public static function removeModel( key:String ):void
 		{
 			delete instanceMap[ key ];
 		}

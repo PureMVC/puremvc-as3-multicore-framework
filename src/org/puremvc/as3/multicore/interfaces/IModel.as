@@ -53,11 +53,5 @@ package org.puremvc.as3.multicore.interfaces
 		 */
 		function hasProxy( proxyName:String ) : Boolean;
 
-		/**
-		 * Remove an IModel instance
-		 * 
-		 * @param multitonKey of IModel instance to remove
-		 */
-		function removeModel( key:String ):void;
 	}
 }

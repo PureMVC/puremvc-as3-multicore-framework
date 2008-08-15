@@ -174,7 +174,7 @@ package org.puremvc.as3.multicore.core
 		 * 
 		 * @param multitonKey of IController instance to remove
 		 */
-		public function removeController( key:String ):void
+		public static function removeController( key:String ):void
 		{
 			delete instanceMap[ key ];
 		}
