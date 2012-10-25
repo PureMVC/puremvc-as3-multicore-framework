@@ -37,7 +37,7 @@ Production - [Version 1.0.5](https://github.com/PureMVC/puremvc-as3-multicore-fr
 * [AIR](http://en.wikipedia.org/wiki/Adobe_Air)
 
 ## License
-* PureMVC AS3 MultiCore Framework - Copyright(c) 2006-2012 Futurescale, Inc.
+* PureMVC AS3 MultiCore Framework - Copyright © 2006-2012 Futurescale, Inc.
 * All rights reserved.
 
 * Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
