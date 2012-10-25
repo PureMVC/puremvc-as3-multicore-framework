@@ -1,5 +1,4 @@
-PureMVC [ MultiCore Version ]
-Copyright(c) 2006-08 Futurescale, Inc., Some rights reserved.
+PureMVC AS3 MultiCore Framework
 --------------------------------------------------------------------------
 Release Date: 8/14/08
     Platform: ActionScript 3 (Flash, Flex, AIR)
@@ -7,7 +6,6 @@ Release Date: 8/14/08
     Revision: 0
        Minor: 5
       Author: Cliff Hall <cliff@puremvc.org>
-     License: Creative Commons Attribution 3.0 United States License
 --------------------------------------------------------------------------
 1.0.5 - Added a public static hasCore method to Facade and IFacade. 
 		Made Facade.removeCore public static.
