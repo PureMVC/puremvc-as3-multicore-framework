@@ -1,7 +1,7 @@
 ## [PureMVC](http://puremvc.github.com/) ActionScript 3 MultiCore Framework
 PureMVC is a lightweight framework for creating applications based upon the classic [Model-View-Controller](http://en.wikipedia.org/wiki/Model-view-controller) design meta-pattern. This is the reference implementation of the MultiCore Version, written for the ActionScript 3 language. It supports [modular programming](http://en.wikipedia.org/wiki/Modular_programming) through the use of [Multiton](http://en.wikipedia.org/wiki/Multiton) Core actors instead of the [Singleton](http://en.wikipedia.org/wiki/Singleton_pattern)s used in the [Standard Version](https://github.com/PureMVC/puremvc-as3-standard-framework/wiki).
 
-* [API Docs](http://darkstar.puremvc.org/content_header.html?url=http://puremvc.org/pages/docs/AS3/multicore/framework_asdoc/&desc=PureMVC%20API%20Docs:%20PureMVC%20MultiCore%20for%20ActionScript%203)
+* [API Docs](http://puremvc.org/pages/docs/AS3/multicore/framework_asdoc/)
 * [Unit Tests](https://github.com/PureMVC/puremvc-as3-multicore-unittests/wiki)
 * [Discussion](http://forums.puremvc.org/index.php?board=27.0)
 * [MultiCore Version Overview Presentation](http://puremvc.tv/#P002)
